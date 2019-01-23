@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @accomplishment.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @accomplishment.description %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @accomplishment.year %>
+</p>
+
+<%= link_to 'Edit', edit_accomplishment_path(@accomplishment) %> |
+<%= link_to 'Back', accomplishments_path %>
