@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_23_205401) do
+ActiveRecord::Schema.define(version: 2019_02_02_185447) do
 
   create_table "accomplishments", force: :cascade do |t|
     t.string "title"
@@ -27,10 +27,17 @@ ActiveRecord::Schema.define(version: 2019_01_23_205401) do
     t.integer "weight"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "age"
+    t.string "sports_played"
   end
 
   create_table "coaches", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "connections", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
