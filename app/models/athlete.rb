@@ -1,7 +1,6 @@
 class Athlete < ApplicationRecord
-    has_many :awards
-
-    has_many :messages, class_name: "Private::Message", foreign_key: :conversation_id
-
-    belongs_to :sender, foreign_key: :sender_id, class_name: ''
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
 end

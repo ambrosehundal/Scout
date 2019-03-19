@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :coaches
+  #devise_for :athletes
   resources :connections
   resources :jobs
   resources :coaches
